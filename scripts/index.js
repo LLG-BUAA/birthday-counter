@@ -26,7 +26,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date(`${config.birthdate} 10:29:00`).getTime();
+let countDown = new Date(`${config.birthdate} 10:30:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
     distance = now - countDown;
@@ -494,8 +494,8 @@ x = setInterval(function() {
     init();
   }
 
-  if (distance < 0) {
-    clearInterval(x);
-    console.log("happy birthday");
-  }
+  //if (distance < 0) {
+  //  clearInterval(x);
+  //  console.log("happy birthday");
+  //}
 }, second);
