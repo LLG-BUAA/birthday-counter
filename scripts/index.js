@@ -5,7 +5,7 @@ const canvasC = document.getElementById('c');
 
 const config = {
   birthdate: 'Apr 9, 2023',
-  name:!!! Tang !!!'
+  name: '!!! Tang !!!'
 };
 
 function hideEverything() {
@@ -494,8 +494,8 @@ x = setInterval(function() {
     init();
   }
 
-  // if (distance < 0) {
-  //     clearInterval(x);
-  //     console.log("happy birthday");
-  // }
+  if (distance < 0) {
+      clearInterval(x);
+      console.log("happy birthday");
+  }
 }, second);
