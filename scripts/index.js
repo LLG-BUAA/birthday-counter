@@ -4,8 +4,8 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'Apr 10, 2023',
-  name: '💫'
+  birthdate: 'Jan 29, 2020',
+  name: 'Darlene'
 };
 
 function hideEverything() {
@@ -26,10 +26,10 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date(`${config.birthdate} 10:31:00`).getTime();
+let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
 x = setInterval(function() {
   let now = new Date().getTime(),
-    distance = now - countDown;
+    distance = countDown - now;
 
   document.getElementById('day').innerText = Math.floor(distance / day);
   document.getElementById('hour').innerText = Math.floor(
@@ -494,8 +494,8 @@ x = setInterval(function() {
     init();
   }
 
-  //if (distance < 0) {
-  //  clearInterval(x);
-  //  console.log("happy birthday");
-  //}
+  // if (distance < 0) {
+  //     clearInterval(x);
+  //     console.log("happy birthday");
+  // }
 }, second);
